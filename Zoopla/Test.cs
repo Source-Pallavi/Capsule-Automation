@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Zoopla.Base;
+using Zoopla.Pages;
 
 namespace Zoopla
 {
@@ -17,6 +18,7 @@ namespace Zoopla
     public class Test:BaseC
     {
         IWebDriver driver;
+        ICall call;
         public Test(string browserName)
         {
            
@@ -27,6 +29,8 @@ namespace Zoopla
         public void TestNews()
         {
 
+            call = new Login(driver);
+            call.Calling();
         }
     }
 }
