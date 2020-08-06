@@ -61,9 +61,10 @@
     <Compile Include="Base\BaseC.cs" />
     <Compile Include="ICall.cs" />
     <Compile Include="Pages\Login.cs" />
-    <Compile Include="SendData.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases\AddCase.cs" />
+    <Compile Include="TestCases\AddPeoples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

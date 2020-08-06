@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Zoopla.Base;
 using Zoopla.Pages;
+using Zoopla.TestCases;
 
 namespace Zoopla
 {
@@ -24,13 +25,34 @@ namespace Zoopla
            
                 driver = StartBrowser("chrome");
             }
-
-                [Test]
+        
+        [Test, Order(1) ]
         public void TestNews()
         {
 
             call = new Login(driver);
             call.Calling();
+        }
+        [Test,Order(2)]
+        public void AddPeople()
+        {
+             call = new AddPeoples(driver);
+            call.Calling();
+
+        }
+        [Test, Order(3)]
+        public void AddCase()
+        {
+            call = new AddCase(driver);
+            call.Calling();
+
+        }
+          [Test, Order(4)]
+        public void CLose()
+        {
+            
+            driver.Close();
+            driver.Quit();
         }
     }
 }
