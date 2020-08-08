@@ -25,7 +25,7 @@ namespace Zoopla.SendEmails
 
             mail.Body = "Please find the attached report to get details.”";
 
-            var mostRecentlyModified = Directory.GetFiles(@"C:\Users\rebel\source\repos\Zoopla\Zoopla\ExtentReport", "*.html")
+            var mostRecentlyModified = Directory.GetFiles(@"C:\Users\rebel\source\repos\Zoopla\Zoopla\ ExtentReport", "*.html")
             .Select(f => new FileInfo(f))
             .OrderByDescending(fi => fi.LastWriteTime)
             .First()

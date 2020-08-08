@@ -23,7 +23,7 @@ namespace Zoopla
     [Parallelizable]
     public class Test:BaseC
     {
-        IWebDriver driver;
+      /*  IWebDriver driver;
         ICall call;
         protected ExtentReports _extent = null;
         protected ExtentTest _test = null;
@@ -60,7 +60,7 @@ namespace Zoopla
         public void AddPeople()
         {
              call = new AddPeoples(driver);
-             call.Calling();
+            // call.Calling();
           
 
         }
@@ -68,7 +68,7 @@ namespace Zoopla
         public void AddCase()
         {
             call = new AddCase(driver);
-            call.Calling();
+           // call.Calling();
           
 
         }
@@ -76,8 +76,8 @@ namespace Zoopla
         public void StatusCheck()
         {
             ValidateTheCase validate = new ValidateTheCase(driver);
-            Assert.AreEqual( validate.Validate()[0], "Pranjali .k");
-            Assert.AreEqual(validate.Validate()[1], "Open");
+           // Assert.AreEqual( validate.Validate()[0], "Pranjali .k");
+           // Assert.AreEqual(validate.Validate()[1], "Open");
             
 
         }
@@ -133,6 +133,6 @@ namespace Zoopla
             {
                 throw (e);
             }
-        }
+        }*/
     }
 }

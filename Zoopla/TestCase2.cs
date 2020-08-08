@@ -35,8 +35,9 @@ namespace Zoopla
         public void Header()
         {
 
-            call = new AccountSetting(driver);
+          AccountSetting  call = new AccountSetting(driver);
             call.Calling();
+            call.AddUsers("Steve","XYZ","abc@gmail.com","xyz");
 
         }
 
