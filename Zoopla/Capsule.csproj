@@ -131,6 +131,7 @@
     <Compile Include="TestCases\AccountSetting.cs" />
     <Compile Include="TestCases\AddCase.cs" />
     <Compile Include="TestCases\AddPeoples.cs" />
+    <Compile Include="WebWrap.cs" />
     <Compile Include="WrrapData.cs" />
   </ItemGroup>
   <ItemGroup>

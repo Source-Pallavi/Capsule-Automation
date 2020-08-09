@@ -52,6 +52,43 @@ namespace Zoopla.TestCases
         public IWebElement Username;
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/span/div[2]/div/form/div[3]/ul/li[1]/input")]
         public IWebElement Invite;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div[2]/div[5]/a/h4")]
+        public IWebElement Oppotunitie;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/form/div/div/button")]
+        public IWebElement AddMileStone;
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/div/div[1]/div/input")]
+        public IWebElement MilStoneName;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/div/div[3]/div/input")]
+        public IWebElement Percentage;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/div/div[4]/div/input")]
+        public IWebElement Days;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/footer/div/button[1]")]
+        public IWebElement Save;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div[2]/div[7]/a/h4")]
+        public IWebElement Categories;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div[1]/div[2]/button")]
+        public IWebElement AddCoverage;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/div/div[1]/div/input")]
+        public IWebElement TaskName;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/div/div[2]/div/div/div[4]")]
+        public IWebElement Color;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/footer/div/button[1]")]
+        public IWebElement SaveTask;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div[2]/div[9]/a/h4")]
+        public IWebElement Tag;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/form/div/div[2]/button")]
+        public IWebElement AddTag;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/div/div[1]/div/input")]
+        public IWebElement TagName;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/footer/div/button[1]")]
+        public IWebElement SaveTag;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div[2]/div[3]/a/h4")]
+        public IWebElement Integration;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/form/footer/div/button[1]")]
+        public IWebElement SaveTcag;
+
+
         public void Calling()
         {
             Thread.Sleep(5000);
@@ -100,9 +137,70 @@ namespace Zoopla.TestCases
             Thread.Sleep(5000);
             Invite.Click();
             Thread.Sleep(5000);
+        }
+        public void Opportunities(String name, String days, String Percnt)
+        {
+            AccountSettings.Click();
+            Thread.Sleep(5000);
+            AccountSet.Click();
+            Thread.Sleep(5000);
+            Oppotunitie.Click();
+            Thread.Sleep(5000);
+            AddMileStone.Click();
+            Thread.Sleep(5000);
+            MilStoneName.SendKeys(name);
+            Thread.Sleep(5000);
+            Percentage.SendKeys(Percnt);
+            Thread.Sleep(5000);
+            Days.SendKeys(days);
+            Thread.Sleep(5000);
+            Save.Click();
 
         }
 
+        public void Task(String name)
+        {
+            AccountSettings.Click();
+            Thread.Sleep(5000);
+            AccountSet.Click();
+            Thread.Sleep(5000);
+            Categories.Click();
+            Thread.Sleep(5000);
+            AddCoverage.Click();
+            Thread.Sleep(5000);
+            TaskName.SendKeys(name);
+            Thread.Sleep(5000);
+            Color.Click();
+            Thread.Sleep(5000);
+            SaveTask.Click();
+            Thread.Sleep(5000);
+        }
 
-    }
+        public void Tags(String name)
+        {
+            AccountSettings.Click();
+            Thread.Sleep(5000);
+            AccountSet.Click();
+            Thread.Sleep(5000);
+            Tag.Click();
+            Thread.Sleep(5000);
+            AddTag.Click();
+            Thread.Sleep(5000);
+            TagName.SendKeys(name);
+            Thread.Sleep(5000);
+            SaveTag.Click();
+            Thread.Sleep(5000);
+        }
+        public void Integrations(String name)
+        {
+            AccountSettings.Click();
+            Thread.Sleep(5000);
+            AccountSet.Click();
+            Thread.Sleep(5000);
+            Integration.Click();
+            WrrapData wrrap = new WrrapData(driver);
+            wrrap.Wrappup("btn-primary settings-page-integration-configure", "Class");
+        }
+
+        }
 }

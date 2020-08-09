@@ -37,9 +37,46 @@ namespace Zoopla
 
           AccountSetting  call = new AccountSetting(driver);
             call.Calling();
-            call.AddUsers("Steve","XYZ","abc@gmail.com","xyz");
+           // call.AddUsers("Stjxcxeevee","mXYtczyZ","anbbbggvczxcccc@gmail.com","xcdcdnvxxfyz");
 
         }
+        [Test, Order(3)]
+        public void AddMileStones()
+        {
+
+            AccountSetting call = new AccountSetting(driver);
+            
+        //   call.Opportunities("ABCDD", "10","100");
+
+        }
+        [Test, Order(4)]
+        public void TaskCategories()
+        {
+
+            AccountSetting call = new AccountSetting(driver);
+
+         //   call.Task("Pallaviivmii");
+
+        }
+        [Test, Order(5)]
+        public void AddTags()
+        {
+
+            AccountSetting call = new AccountSetting(driver);
+
+          //  call.Tags("Pallaviiccii");
+
+        }
+        [Test, Order(6)]
+        public void Integration()
+        {
+
+            AccountSetting call = new AccountSetting(driver);
+
+            call.Integrations("Pallaviiccii");
+
+        }
+
 
         [OneTimeTearDown]
         public void Close()

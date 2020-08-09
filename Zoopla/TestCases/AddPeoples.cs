@@ -57,11 +57,11 @@ namespace Zoopla.TestCases
             Thread.Sleep(5000);
             AddPeople.Click();
 
-            Thread.Sleep(5000);
+           /* Thread.Sleep(5000);
             Title.Click();
             Thread.Sleep(5000);
 
-             Pre.Click();
+             Pre.Click();*/
             Thread.Sleep(5000);
 
             name.SendKeys("Pranjali");
