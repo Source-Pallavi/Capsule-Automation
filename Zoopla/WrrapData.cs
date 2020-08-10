@@ -22,7 +22,7 @@ namespace Zoopla
         public Object[] Wrappup(String Path,String PathBy)
         {
             IList<IWebElement> header=null;
-            Thread.Sleep(2000);
+            
             if (PathBy == "LinkText")
             {
                 header = driver.FindElements(By.LinkText(Path));
@@ -39,9 +39,10 @@ namespace Zoopla
                 string text = items.Text;
                 mylist.Add(text);
             }
+            Thread.Sleep(200000);
             mylist.Sort();
             int count = header.Count();
-            Object[] array= { count,mylist[0],mylist[1] };
+            Object[] array= { count,mylist[0],mylist[header.Count-1] };
             return array;
         }
 

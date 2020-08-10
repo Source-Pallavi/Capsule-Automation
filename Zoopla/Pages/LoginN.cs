@@ -32,9 +32,8 @@ namespace Zoopla.Pages
         {
 
             Userid.SendKeys("pallavidubey0823");
-            Password.SendKeys("");
+            Password.SendKeys("tergh");
 
-            SignIn.Click();
             Thread.Sleep(5000);
         }
         public void Calling1()
@@ -42,8 +41,7 @@ namespace Zoopla.Pages
 
             Userid.SendKeys("");
             Password.SendKeys("");
-
-            SignIn.Click();
+            
             Thread.Sleep(5000);
         }
     }

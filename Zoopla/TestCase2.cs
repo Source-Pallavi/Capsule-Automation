@@ -63,7 +63,7 @@ namespace Zoopla
         {
 
             AccountSetting call = new AccountSetting(driver);
-            String Tag = "Shubhaaaa";
+            String Tag = "Shubhaazsaaaaa";
             Assert.AreEqual(call.Tags(Tag), Tag);
 
 
@@ -76,6 +76,14 @@ namespace Zoopla
 
           var count=  call.Integrations();
             Assert.AreEqual(count, 11);
+
+        }
+        [Test, Order(0)]
+        public void Internet()
+        {
+
+            Internet check = new Internet(driver);
+            System.Console.WriteLine(check.IsConnectedToInternet());
 
         }
 

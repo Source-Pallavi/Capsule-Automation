@@ -111,12 +111,12 @@ namespace Zoopla.TestCases
             }
             js.ExecuteScript("window.scrollBy(0,1000)");
             Thread.Sleep(5000);
-           // Apprearance.Click();
-           // Thread.Sleep(5000);
-           // UploadFile.Click();
-         //   Thread.Sleep(5000);
-          //  Process.Start("C:\\Users\\rebel\\source\\repos\\Zoopla\\Zoopla\\FileUpload");
-         //   Thread.Sleep(3000);
+            Apprearance.Click();
+            Thread.Sleep(5000);
+            UploadFile.Click();
+            Thread.Sleep(5000);
+            Process.Start("C:\\Users\\rebel\\source\\repos\\Zoopla\\Zoopla\\FileUpload");
+            Thread.Sleep(3000);
            
 
         }
@@ -176,7 +176,7 @@ namespace Zoopla.TestCases
             Thread.Sleep(5000);
         }
 
-        public Object Tags(String name)
+        public string Tags(String name)
         {
             AccountSettings.Click();
             Thread.Sleep(5000);
@@ -191,7 +191,8 @@ namespace Zoopla.TestCases
             SaveTag.Click();
             Thread.Sleep(5000);
             WrrapData wrrap = new WrrapData(driver);
-            return wrrap.Wrappup("hyperlink-button.hyperlink-button--plain", "Class")[2];
+            String path="//button[text()='"+name+"']";
+            return (string)wrrap.Wrappup(path, "Class")[2];
         }
         public Object Integrations()
         {

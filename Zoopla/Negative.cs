@@ -6,13 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Zoopla.Base;
+using Zoopla.Pages;
 
 namespace Zoopla
 {
+    [TestFixture("firefox")]
+    [Parallelizable]
     public class Negative : BaseC
     {
         IWebDriver driver;
-        ICall call;
+        LoginN call;
         public Negative(string browserName)
         {
 
@@ -23,8 +26,15 @@ namespace Zoopla
         public void Login()
         {
 
-            call = new LogSinN(driver);
+            call = new LoginN(driver);
             call.Calling();
+        }
+        [Test, Order(2)]
+        public void Login1()
+        {
+
+            call = new LoginN(driver);
+            call.Calling1();
         }
     }
 }
