@@ -19,18 +19,18 @@ namespace Zoopla
             PageFactory.InitElements(driver, this);
         }
 
-        public Object[] Wrappup( String Path,String PathBy)
+        public Object[] Wrappup(String Path,String PathBy)
         {
             IList<IWebElement> header=null;
             Thread.Sleep(2000);
-            if (PathBy == "Class")
+            if (PathBy == "LinkText")
             {
-                header = driver.FindElements(By.ClassName(Path));
+                header = driver.FindElements(By.LinkText(Path));
 
             }
-            if (PathBy == "TagName")
+            if (PathBy == "Class")
             {
-                 header = driver.FindElements(By.TagName(Path));
+                 header = driver.FindElements(By.ClassName(Path));
             }
             List<string> mylist = new List<string>();
             foreach (var items in header)
@@ -41,7 +41,7 @@ namespace Zoopla
             }
             mylist.Sort();
             int count = header.Count();
-            Object[] array= { count,mylist[0],mylist[header.Count-1] };
+            Object[] array= { count,mylist[0],mylist[1] };
             return array;
         }
 

@@ -191,11 +191,11 @@ namespace Zoopla.TestCases
             SaveTag.Click();
             Thread.Sleep(5000);
             WrrapData wrrap = new WrrapData(driver);
-            return wrrap.Wrappup("btn-primary settings-page-integration-configure", "Class")[1];
-            Thread.Sleep(5000);
+            return wrrap.Wrappup("hyperlink-button.hyperlink-button--plain", "Class")[2];
         }
         public Object Integrations()
         {
+            Thread.Sleep(5000);
             AccountSettings.Click();
             Thread.Sleep(5000);
             AccountSet.Click();
@@ -203,7 +203,7 @@ namespace Zoopla.TestCases
             Integration.Click();
             Thread.Sleep(50000);
             WrrapData wrrap = new WrrapData(driver);
-            return wrrap.Wrappup("btn-primary settings-page-integration-configure", "Class")[0];
+            return wrrap.Wrappup("Configure", "LinkText")[0];
         }
 
         }

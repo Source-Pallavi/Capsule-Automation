@@ -121,7 +121,9 @@
   <ItemGroup>
     <Compile Include="Base\BaseC.cs" />
     <Compile Include="ICall.cs" />
+    <Compile Include="Negative.cs" />
     <Compile Include="Pages\Login.cs" />
+    <Compile Include="Pages\LoginN.cs" />
     <Compile Include="Pages\ValidateTheCase.cs" />
     <Compile Include="ScreenShot\ScreenS.cs" />
     <Compile Include="SendEmails\SendMail.cs" />

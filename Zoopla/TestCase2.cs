@@ -63,8 +63,9 @@ namespace Zoopla
         {
 
             AccountSetting call = new AccountSetting(driver);
+            String Tag = "Shubhaaaa";
+            Assert.AreEqual(call.Tags(Tag), Tag);
 
-          //  call.Tags("Pallaviiccii");
 
         }
         [Test, Order(6)]
@@ -74,7 +75,7 @@ namespace Zoopla
             AccountSetting call = new AccountSetting(driver);
 
           var count=  call.Integrations();
-            Assert.AreEqual(count, "11");
+            Assert.AreEqual(count, 11);
 
         }
 
