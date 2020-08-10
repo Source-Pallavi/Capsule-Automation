@@ -73,7 +73,8 @@ namespace Zoopla
 
             AccountSetting call = new AccountSetting(driver);
 
-            call.Integrations("Pallaviiccii");
+          var count=  call.Integrations();
+            Assert.AreEqual(count, "11");
 
         }
 

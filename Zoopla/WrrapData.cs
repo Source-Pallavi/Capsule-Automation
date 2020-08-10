@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Zoopla
 {
-   public class WrrapData:WebWrap
+   public class WrrapData
     {
 
         public IWebDriver driver;
@@ -19,9 +19,9 @@ namespace Zoopla
             PageFactory.InitElements(driver, this);
         }
 
-        public Object Wrappup( String Path,String PathBy)
+        public Object[] Wrappup( String Path,String PathBy)
         {
-            IList<IWebElement> header;
+            IList<IWebElement> header=null;
             Thread.Sleep(2000);
             if (PathBy == "Class")
             {
@@ -31,10 +31,18 @@ namespace Zoopla
             if (PathBy == "TagName")
             {
                  header = driver.FindElements(By.TagName(Path));
-
-
             }
-            return null;
+            List<string> mylist = new List<string>();
+            foreach (var items in header)
+            {
+
+                string text = items.Text;
+                mylist.Add(text);
+            }
+            mylist.Sort();
+            int count = header.Count();
+            Object[] array= { count,mylist[0],mylist[header.Count-1] };
+            return array;
         }
 
        

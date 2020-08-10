@@ -176,7 +176,7 @@ namespace Zoopla.TestCases
             Thread.Sleep(5000);
         }
 
-        public void Tags(String name)
+        public Object Tags(String name)
         {
             AccountSettings.Click();
             Thread.Sleep(5000);
@@ -190,16 +190,20 @@ namespace Zoopla.TestCases
             Thread.Sleep(5000);
             SaveTag.Click();
             Thread.Sleep(5000);
+            WrrapData wrrap = new WrrapData(driver);
+            return wrrap.Wrappup("btn-primary settings-page-integration-configure", "Class")[1];
+            Thread.Sleep(5000);
         }
-        public void Integrations(String name)
+        public Object Integrations()
         {
             AccountSettings.Click();
             Thread.Sleep(5000);
             AccountSet.Click();
             Thread.Sleep(5000);
             Integration.Click();
+            Thread.Sleep(50000);
             WrrapData wrrap = new WrrapData(driver);
-            wrrap.Wrappup("btn-primary settings-page-integration-configure", "Class");
+            return wrrap.Wrappup("btn-primary settings-page-integration-configure", "Class")[0];
         }
 
         }
