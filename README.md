@@ -49,11 +49,12 @@ downloaded the dependencies (the packages menthioned above)
 * Close the browser
 * Navigates to homepage
 * Log out from application
-#Second- Negative test
 
-Try to Login with wrong username
-Try to Login with empty username
-Try to Login with wrong passowrd
-Try to Login with empty password
-## Author 
-Pallavi Dubey
+##Second- Negative test
+
+* Try to Login with wrong username
+* Try to Login with empty username
+* Try to Login with wrong passowrd
+* Try to Login with empty password
+# Author 
+ ##*Pallavi Dubey
