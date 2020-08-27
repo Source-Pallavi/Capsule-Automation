@@ -34,8 +34,8 @@ To run this project, install it locally using visual studio:
 create a ms. project
 downloaded the dependencies (the packages menthioned above)
 
-## scenarios
-###First- Positive scenario of buying book
+## Scenarios
+### First- Positive scenario of buying book
 
 * Login to casulecrm application
 * Navigates to Home page
@@ -50,11 +50,11 @@ downloaded the dependencies (the packages menthioned above)
 * Navigates to homepage
 * Log out from application
 
-##Second- Negative test
+## Second- Negative test
 
 * Try to Login with wrong username
 * Try to Login with empty username
 * Try to Login with wrong passowrd
 * Try to Login with empty password
 # Author 
- ##*Pallavi Dubey
+ ## *Pallavi Dubey
