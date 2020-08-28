@@ -11,12 +11,12 @@ namespace Zoopla
   public  class ScreenS
     {
         public static string Capture(IWebDriver driver, string screenShotName)
-        {
+        {   //screenshot
             string localpath = "";
             try
             {
                 Thread.Sleep(4000);
-                ITakesScreenshot ts = (ITakesScreenshot)driver;
+                ITakesScreenshot ts = (ITakesScreenshot)driver;//(down casting)
                 Screenshot screenshot = ts.GetScreenshot();
                 string finalpth = @"C:\Users\rebel\source\repos\Zoopla\Zoopla\ScreenShot\" + screenShotName + TakesScreenshotWithDate() + ".png";
                 localpath = new Uri(finalpth).LocalPath;

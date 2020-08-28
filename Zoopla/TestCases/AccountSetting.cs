@@ -13,7 +13,7 @@ namespace Zoopla.TestCases
   public  class AccountSetting:ICall
     {
         public IWebDriver driver;
-
+        //pom constructor
         public AccountSetting(IWebDriver driver)
         {
             this.driver = driver;
@@ -90,7 +90,21 @@ namespace Zoopla.TestCases
 
 
         public void Calling()
-        {
+        {/* click on each link available at left panel:
+	Account Settings
+	1) Account
+	2) Invoices
+	3) Export
+	4) Appearance
+	5) Mail drop box
+	6) Users
+	7) Opportunities
+	8) Tracks
+	9) Task Categories
+	10) Custom Fields
+	11) Tags
+	12) Integrations
+            */
             Thread.Sleep(5000);
             AccountSettings.Click();
             Thread.Sleep(5000);
@@ -122,38 +136,38 @@ namespace Zoopla.TestCases
         }
        public  void  AddUsers(String name, String lastName, String emailid, String userid)
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             UserAndTeams.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AddUser.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             EnterName.SendKeys(name);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             LastName.SendKeys(lastName);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             EmailID.SendKeys(emailid);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Username.SendKeys(userid);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Invite.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
         }
         public void Opportunities(String name, String days, String Percnt)
         {
             AccountSettings.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AccountSet.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Oppotunitie.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AddMileStone.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             MilStoneName.SendKeys(name);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Percentage.SendKeys(Percnt);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Days.SendKeys(days);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Save.Click();
 
         }
@@ -161,48 +175,48 @@ namespace Zoopla.TestCases
         public void Task(String name)
         {
             AccountSettings.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AccountSet.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Categories.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AddCoverage.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             TaskName.SendKeys(name);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Color.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             SaveTask.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
         }
 
         public string Tags(String name)
         {
             AccountSettings.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AccountSet.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Tag.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AddTag.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             TagName.SendKeys(name);
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             SaveTag.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             WrrapData wrrap = new WrrapData(driver);
             String path="//button[text()='"+name+"']";
             return (string)wrrap.Wrappup(path, "Class")[2];
         }
         public Object Integrations()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AccountSettings.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             AccountSet.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Integration.Click();
-            Thread.Sleep(50000);
+            Thread.Sleep(20000);
             WrrapData wrrap = new WrrapData(driver);
             return wrrap.Wrappup("Configure", "LinkText")[0];
         }

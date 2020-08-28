@@ -11,23 +11,26 @@ namespace Zoopla
 {
    public class WrrapData
     {
-
+        //declaring webdriver
         public IWebDriver driver;
+        //constructor for using pom
         public WrrapData(IWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
-
+        //method so it will return object array containing max min and size of IwebList
         public Object[] Wrappup(String Path,String PathBy)
         {
             IList<IWebElement> header=null;
-            
+            // web sracping by linktxt
             if (PathBy == "LinkText")
             {
                 header = driver.FindElements(By.LinkText(Path));
 
-            }
+            } 
+            //web sracping by class
+
             if (PathBy == "Class")
             {
                  header = driver.FindElements(By.ClassName(Path));

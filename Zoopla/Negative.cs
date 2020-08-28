@@ -14,11 +14,11 @@ namespace Zoopla
     [Parallelizable]
     public class Negative : BaseC
     {
+        // negative scenariors
         IWebDriver driver;
         LoginN call;
         public Negative(string browserName)
         {
-
             driver = StartBrowser("chrome");
         }
 
@@ -32,7 +32,7 @@ namespace Zoopla
         [Test, Order(2)]
         public void Login1()
         {
-
+            //login with wrong details
             call = new LoginN(driver);
             call.Calling1();
         }

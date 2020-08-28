@@ -11,13 +11,13 @@ namespace Zoopla.SendEmails
    public static class SendMail
     {
         public static void Send_Report_In_Mail()
-        {
-            MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("pallavidubey6232@gmail.com");
-            mail.To.Add("rebelpallavi786@gmail.com");
+        {// sending mail
+            MailMessage mail = new MailMessage();//creating object for mail message
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");//smtp protocol
+            mail.From = new MailAddress("pallavidubey6232@gmail.com");//sendder mail id
+            mail.To.Add("rebelpallavi786@gmail.com");//reciver mail id
 
-            StringBuilder TimeAndDate = new StringBuilder(DateTime.Now.ToString());
+            StringBuilder TimeAndDate = new StringBuilder(DateTime.Now.ToString());//to fetch the date for adding the date and time to add the mail
             TimeAndDate.Replace("/", "_");
             TimeAndDate.Replace(":", "_");
 
@@ -34,7 +34,7 @@ namespace Zoopla.SendEmails
             Attachment attachment;
             attachment = new Attachment(mostRecentlyModified);
             mail.Attachments.Add(attachment);
-
+            //credential details
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential("pallavidubey6232@gmail.com", "12respect34");
             SmtpServer.EnableSsl = true;

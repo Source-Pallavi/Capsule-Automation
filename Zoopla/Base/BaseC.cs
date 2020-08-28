@@ -29,12 +29,8 @@ namespace Zoopla.Base
             {
                 throw (new Exception("BROWSER_NAME is not specified"));
             }
-           /* var desiredCapabilities;
-            var options = new ChromeOptions();
-            options.AddArgument(@"--incognito");
-            options.AddArgument("--start-maximized");
-            desiredCapabilities.SetCapability(ChromeOptions.Capability, options);*/
             driver.Url = "https://bridgelabz.capsulecrm.com/login";
+           
             driver.Manage().Window.Maximize();
             return driver;
         }

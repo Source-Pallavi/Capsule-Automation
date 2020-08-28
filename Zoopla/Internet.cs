@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,23 +11,16 @@ namespace Zoopla
 {
   public  class Internet
     {
-        public IWebDriver driver;
-        public Internet(IWebDriver driver)
-        {
-            this.driver = driver;
-          
-        }
-        public bool IsConnectedToInternet()
+        //for checking internet connection
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+        
+        public static bool IsConnectedToInternet()
         {
             try
             {
-                Ping myPing = new Ping();
-                String host = "google.com";
-                byte[] buffer = new byte[32];
-                int timeout = 1000;
-                PingOptions pingOptions = new PingOptions();
-                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
-                return (reply.Status == IPStatus.Success);
+                int Desc;
+                return InternetGetConnectedState(out Desc, 0);
             }
             catch (Exception)
             {

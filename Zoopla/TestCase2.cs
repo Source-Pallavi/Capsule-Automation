@@ -22,12 +22,13 @@ namespace Zoopla
         {
 
             driver = StartBrowser("chrome");
+           
         }
 
         [Test, Order(1)]
         public void Login()
         {
-
+            //login to capsulecrm
             call = new Login(driver);
             call.Calling();
         }
@@ -43,19 +44,17 @@ namespace Zoopla
         [Test, Order(3)]
         public void AddMileStones()
         {
-
+            //adding milstone
             AccountSetting call = new AccountSetting(driver);
-            
-        //   call.Opportunities("ABCDD", "10","100");
+            call.Opportunities("ABCDD", "10","100");
 
         }
         [Test, Order(4)]
         public void TaskCategories()
         {
-
+            //adding task 
             AccountSetting call = new AccountSetting(driver);
-
-         //   call.Task("Pallaviivmii");
+            call.Task("Pallaviivmii");
 
         }
         [Test, Order(5)]
@@ -71,19 +70,18 @@ namespace Zoopla
         [Test, Order(6)]
         public void Integration()
         {
-
+            // adding integration
             AccountSetting call = new AccountSetting(driver);
-
-          var count=  call.Integrations();
+           var count=  call.Integrations();
             Assert.AreEqual(count, 11);
 
         }
-        [Test, Order(0)]
-        public void Internet()
-        {
 
-            Internet check = new Internet(driver);
-            System.Console.WriteLine(check.IsConnectedToInternet());
+        [Test, Order(0)]
+        public void Internett()
+        {
+           // results the internet connection
+            System.Console.WriteLine(Internet.IsConnectedToInternet());
 
         }
 
